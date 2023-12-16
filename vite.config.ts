@@ -10,7 +10,7 @@ export default defineConfig(({ mode }) => {
                 "/api": {
                     target: "",
                     changeOrigin: true,
-                    rewrite: (path) => path.replace(/\/^api/, ""),
+                    rewrite: (path) => path.replace(/^\/api/, ""),
                 },
             },
         },
@@ -20,6 +20,7 @@ export default defineConfig(({ mode }) => {
             },
             extensions: [".ts", ".js", ".tsx"],
         },
+        plugins: [react()],
         build: {
             sourcemap: mode === "development" ? true : false,
         },
@@ -31,6 +32,5 @@ export default defineConfig(({ mode }) => {
                 },
             },
         },
-        plugins: [react()],
     };
 });

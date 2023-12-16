@@ -2,12 +2,12 @@ import { createSlice } from "@reduxjs/toolkit";
 
 interface IinitialState {
     todoList: any[];
-    count: number;
+    title: string;
 }
 
 const initialState: IinitialState = {
     todoList: [],
-    count: 888,
+    title: "Hello World",
 };
 
 const todoSlice = createSlice({

@@ -13,7 +13,7 @@ function Home() {
 
     return (
         <div className="App">
-            <div>{todo.count}</div>
+            <div>{todo.title}</div>
             <div>
                 <a href="https://vitejs.dev" target="_blank">
                     <img src={viteLogo} className="logo" alt="Vite logo" />
